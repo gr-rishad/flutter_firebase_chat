@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "504374856937",
+    "firebase_url": "https://fir-lab-exam.firebaseio.com",
+    "project_id": "fir-lab-exam",
+    "storage_bucket": "fir-lab-exam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504374856937:android:16ca74cc35e55607913478",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504374856937-objcos3k0ptdjh27c6fe49s4bvpb6ifa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPgu__8Ajy3uMqOrj1xWhbgPLugHaKtDI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504374856937-objcos3k0ptdjh27c6fe49s4bvpb6ifa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
