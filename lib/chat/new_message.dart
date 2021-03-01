@@ -12,7 +12,7 @@ class _NewMessageState extends State<NewMessage> {
   final TextEditingController _controller = new TextEditingController();
 
   void _sendMessage() {
-    final user = FirebaseAuth.instance.currentUser;
+    final user =  FirebaseAuth.instance.currentUser;
     FocusScope.of(context).unfocus();
     FirebaseFirestore.instance.collection('chat').add({
       'text': _enteredMessage,
