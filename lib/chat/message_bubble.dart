@@ -5,9 +5,9 @@ class MessageBubble extends StatelessWidget {
   final String message;
   final bool isMe;
   final Key key;
-  final String userId;
+  final String username;
 
-  MessageBubble(this.message, this.userId, this.isMe, {this.key});
+  MessageBubble(this.message, this.username, this.isMe, {this.key});
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -37,27 +37,27 @@ class MessageBubble extends StatelessWidget {
             crossAxisAlignment:
                 isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
             children: [
-              FutureBuilder(
-                  future: FirebaseFirestore.instance
-                      .collection('users')
-                      .doc(userId)
-                      .get(),
-                  builder: (context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.waiting) {
-                      return Center(
-                        child: Text('Loading...'),
-                      );
-                    }
-                    return Text(
-                      snapshot.data['username'],
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        color: isMe
-                            ? Colors.black
-                            : Theme.of(context).accentTextTheme.bodyText1.color,
-                      ),
-                    );
-                  }),
+              // FutureBuilder(
+              //     future: FirebaseFirestore.instance
+              //         .collection('users')
+              //         .doc(userId)
+              //         .get(),
+              //     builder: (context, snapshot) {
+              //       if (snapshot.connectionState == ConnectionState.waiting) {
+              //         return Center(
+              //           child: Text('Loading...'),
+              //         );
+              //       }
+              //  return
+              Text(
+                username,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: isMe
+                      ? Colors.black
+                      : Theme.of(context).accentTextTheme.bodyText1.color,
+                ),
+              ),
               Text(
                 message,
                 style: TextStyle(
