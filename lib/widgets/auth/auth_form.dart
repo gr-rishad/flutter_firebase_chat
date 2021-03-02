@@ -41,18 +41,20 @@ class _AuthFormState extends State<AuthForm> {
     FocusScope.of(context).unfocus();
 
     if (_userImageFile == null && !_isLogin) {
-      ScaffoldMessenger.of(context).showSnackBar(
+      // --> Update version -->
+      // ScaffoldMessenger.of(context).showSnackBar(
+      //   SnackBar(
+      //     content: Text('Please pick an image'),
+      //     backgroundColor: Theme.of(context).errorColor,
+      //   ),
+      // );
+      //  -->  Backdated  Snackbar <--
+      Scaffold.of(context).showSnackBar(
         SnackBar(
           content: Text('Please pick an image'),
           backgroundColor: Theme.of(context).errorColor,
         ),
       );
-      //  -->  Backdated  Snackbar <--
-      // Scaffold.of(context).showSnackBar(
-      //   SnackBar(
-      //     content: Text('Please pick an image'),
-      //   ),
-      // );
       return;
     }
     if (isValid) {
